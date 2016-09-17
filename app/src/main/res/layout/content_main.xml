@@ -15,42 +15,57 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:text="Especialistas" />
 
     <Button
         android:id="@+id/button1"
-        android:layout_width="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:text="Alianzas" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:text="Salud al menor" />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:text="Salud Oral" />
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:text="Asistencia al viaje" />
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </LinearLayout>

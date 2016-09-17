@@ -1,5 +1,6 @@
 package com.example.cristian.salud;
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -13,6 +14,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebView;
+import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -32,6 +36,15 @@ public class MainActivity extends AppCompatActivity
                 startActivity(intent);
             }
         });
+
+        final Button button = (Button) findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                WebView myWebView = (WebView) findViewById(R.id.webView);
+                myWebView.loadUrl("http://www.emermedica.com.co/web/vive-emermedica/directorio-especialistas/");
+            }
+        });
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -80,17 +93,36 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
+        Context context = getApplicationContext();
         if (id == R.id.nav_camera) {
-            // Handle the camera action
+
+            CharSequence text = "Contactenos";
+            int duration = Toast.LENGTH_SHORT;
+
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
         } else if (id == R.id.nav_gallery) {
+            CharSequence text = "Actualice sus datos";
+            int duration = Toast.LENGTH_SHORT;
 
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
         } else if (id == R.id.nav_slideshow) {
+            CharSequence text = "Ajustes";
+            int duration = Toast.LENGTH_SHORT;
 
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
         } else if (id == R.id.nav_share) {
-
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse("http://www.mederi.com.co/"));
+            getApplicationContext().startActivity(intent);
         } else if (id == R.id.nav_send) {
+            CharSequence text = "Salud en línea";
+            int duration = Toast.LENGTH_SHORT;
 
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
